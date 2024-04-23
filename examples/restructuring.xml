@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+    <system level="trace"/>
+    <log history="48">
+         <property name="all"/>
+         <event>
+            <eq property="EventType" value="Workflow"/>
+        </event>
+        <event>
+            <eq property="EventType" value="Analysis"/>
+        </event>
+        <event>
+            <eq property="EventType" value="Restructuring"/>
+        </event>
+    </log>
+    <dump create="false"/>
+</config>
