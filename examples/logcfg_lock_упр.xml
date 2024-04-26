@@ -5,17 +5,14 @@
 
 		<event>
 			<eq property="name" value="TLOCK"/>
-			<eq property="p:ProcessName" value="TrProf83"/>
 		</event>
 
 		<event>
 			<eq property="name" value="TTIMEOUT"/>
-			<eq property="p:ProcessName" value="TrProf83"/>
 		</event>
 
 		<event>
 			<eq property="name" value="TDEADLOCK"/>
-			<eq property="p:ProcessName" value="TrProf83"/>
 		</event>
 
 		<property name="all"/>
