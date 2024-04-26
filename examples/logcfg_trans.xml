@@ -7,7 +7,6 @@
 
 		<event>
 			<eq property="name" value="SDBL"/>
-			<eq property="p:processName" value="TrProf83"/>
 			<like property="Func" value="%Transaction%"/>
 		</event>
 
