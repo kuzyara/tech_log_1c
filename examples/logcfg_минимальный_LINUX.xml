@@ -1,0 +1,53 @@
+﻿<!-- Файл настройки logcfg.xml расположить тут: /opt/1C/v8.3/x86_64/conf -->
+<!-- Директорию нужно создать: mkdir -p /opt/1C/v8.3/x86_64/conf -->
+
+<!-- Каталог для логов техжурнала нужно создать: mkdir -p /var/log/1c/logs --> 
+<!-- Затем дать права пользователю службы 1С на эту папку: chown usr1cv8:grp1cv8 /var/log/1c/logs -->
+
+<?xml version="1.0"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+
+	<log location="/var/log/1c/logs/excp" history="600">
+
+		<event>
+			<eq property="name" value="ATTN"/>
+		</event>
+
+		<event>
+			<eq property="name" value="ADMIN"/>
+		</event>
+
+		<event>
+			<eq property="name" value="PROC"/>
+		</event>
+
+		<event>
+			<eq property="name" value="QERR"/>
+		</event>
+
+		<event>
+			<eq property="name" value="EXCP"/>
+		</event>
+
+		<event>
+			<eq property="name" value="EXCPCNTX"/>
+		</event>
+
+		<event>
+			<eq property="name" value="CLSTR"/>
+		</event>
+		
+		<event>
+			<eq property="name" value="TLOCK"/>
+			<ne property="WaitConnections" value=""/>
+		</event>
+		
+		<event>
+			<eq property="name" value="CALL"/>
+			<ne property="RetExcp" value=""/>
+		</event>
+
+		<property name="all"/>
+	</log>
+
+</config>

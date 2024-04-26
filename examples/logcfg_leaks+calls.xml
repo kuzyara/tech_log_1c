@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+
+	<log location="C:\1c_logs\leaks+calls" history="4">
+		
+        <event>
+            <eq property="name" value="CALL"/>
+        </event>
+		
+        <event>
+            <eq property="name" value="LEAKS"/>
+        </event>
+
+		<property name="all"/>
+		
+	</log>
+
+	<leaks collect="1">
+		<point call="server"/>
+		<point proc="ОбщийМодуль.УтечкаНаСервере.Модуль/Утечка"/>
+		<point on="ОбщийМодуль.НаСервере.Модуль/1" off="ОбщийМодуль.Сервисы.Модуль/39"/>
+	</leaks>
+
+</config>
