@@ -5,7 +5,6 @@
 
 		<event>
 			<eq property="name" value="DBMSSQL"/>
-			<eq property="p:processName" value="Test1CProf"/>
 			<ge property="Durationus" value="100000"/>
 		</event>
 
