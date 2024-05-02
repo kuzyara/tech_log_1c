@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+
+    <log location="C:\Programs\1C\Logs\LeaksMem" history="168">
+        <event>
+            <eq property="Name" value="EXCP"/>
+        </event>
+        <event>
+            <eq property="Name" value="LEAKS"/>
+        </event>
+        <event>
+            <eq property="Name" value="CALL"/>
+        </event>
+        <event>
+            <eq property="Name" value="MEM"/>
+        </event>
+        <property name="All"/>
+    </log>
+
+    <log location="C:\Programs\1C\Logs\ScriptCircRefs" history="168">
+        <event>
+            <eq property="Name" value="EXCP"/>
+        </event>
+        <event>
+            <eq property="Name" value="SCRIPTCIRCREFS"/>
+        </event>
+        <property name="All"/>
+    </log>
+
+    <leaks collect="1">
+        <point call="server"/>
+    </leaks>
+
+    <mem/>
+
+    <scriptcircrefs/>
+
+    <dump create="true" location="\\medea\GR705\DUMPS\korn@1c.ru" type="3" prntscrn="false" externaldump="1"/>
+
+</config>
